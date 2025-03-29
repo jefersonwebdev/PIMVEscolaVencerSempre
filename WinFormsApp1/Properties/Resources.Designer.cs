@@ -61,6 +61,26 @@ namespace PIMVEscolaVencerSempre.Properties {
         }
         
         /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_adicionar_usuário_masculino_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-adicionar-usuário-masculino-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_calendário_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-calendário-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Consulta um recurso localizado do tipo System.Byte[].
         /// </summary>
         internal static byte[] icons8_calendário_48 {
@@ -103,6 +123,26 @@ namespace PIMVEscolaVencerSempre.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_gestor_de_networking_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-gestor-de-networking-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_grupo_de_usuários_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-grupo-de-usuários-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_imprimir_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-imprimir-48", resourceCulture);
@@ -113,9 +153,69 @@ namespace PIMVEscolaVencerSempre.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_laptop_verificado_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-laptop-verificado-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_lista_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8-lista-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_mais_calendário_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-mais-calendário-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_mais_calendário_321 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-mais-calendário-321", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_monitor_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-monitor-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_notebook_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-notebook-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_sair_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-sair-32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

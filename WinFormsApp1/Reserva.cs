@@ -44,7 +44,7 @@ namespace WinFormsApp1
         private void gestãoDeEquipamentosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Equipamentos equipamentos = new Equipamentos();
-            equipamentos.MdiParent = this;            
+            equipamentos.MdiParent = this;
             equipamentos.Show();
         }
 
@@ -57,7 +57,7 @@ namespace WinFormsApp1
         private void gestãoDeUsuáriosToolStripMenuItem_click(object sender, EventArgs e)
         {
             FormUsuarios formUsuarios = new FormUsuarios();
-            formUsuarios.MdiParent = this;            
+            formUsuarios.MdiParent = this;
             formUsuarios.Show();
         }
 
@@ -69,8 +69,24 @@ namespace WinFormsApp1
         private void gestaoDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormUsuarios formUsuarios = new FormUsuarios();
-            formUsuarios.MdiParent = this;            
+            formUsuarios.MdiParent = this;
             formUsuarios.Show();
+        }
+
+        private void Reserva_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Reserva_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void novoAgendamentoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NovoAgendamento novoAgendamento = new NovoAgendamento();
+            novoAgendamento.ShowDialog();
         }
     }
 }

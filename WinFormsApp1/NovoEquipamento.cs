@@ -40,7 +40,9 @@ namespace PIMVEscolaVencerSempre
 
             if (resultado > 0)
             {
-                MessageBox.Show("Equipamento cadastrado com sucesso!");
+                //MessageBox.Show("Equipamento cadastrado com sucesso!");
+                MessageBox.Show("Equipamento cadastrado com sucesso!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("Preencha todos os campos.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.Close(); // Fecha o formulário de cadastro
             }
             else

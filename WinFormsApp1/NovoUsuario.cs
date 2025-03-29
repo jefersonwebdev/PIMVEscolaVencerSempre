@@ -31,6 +31,7 @@ namespace PIMVEscolaVencerSempre
             {
                 //MessageBox.Show("Usuário cadastrado com sucesso!");
                 MessageBox.Show("Usuário cadastrado com sucesso!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("Preencha todos os campos.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.Close(); // Fecha o formulário de cadastro
             }
             else

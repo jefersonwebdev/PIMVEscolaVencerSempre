@@ -1,6 +1,6 @@
 ﻿namespace PIMVEscolaVencerSempre
 {
-    partial class FormAgendamentos
+    partial class Principal
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAgendamentos));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             groupBox1 = new GroupBox();
             btn_imprimir = new Button();
             label5 = new Label();
@@ -42,7 +42,13 @@
             label1 = new Label();
             textBox1 = new TextBox();
             monthCalendar1 = new MonthCalendar();
-            dataGridViewAgendamentos = new DataGridView();
+            dataGridView1 = new DataGridView();
+            ID = new DataGridViewTextBoxColumn();
+            Equipamento = new DataGridViewTextBoxColumn();
+            Turma = new DataGridViewTextBoxColumn();
+            Sala = new DataGridViewTextBoxColumn();
+            Professor = new DataGridViewTextBoxColumn();
+            Data = new DataGridViewTextBoxColumn();
             groupBox2 = new GroupBox();
             btn_excluir = new Button();
             btn_voltar = new Button();
@@ -50,11 +56,9 @@
             btn_gravar = new Button();
             btn_limpar = new Button();
             btn_todos = new Button();
-            panel1 = new Panel();
             groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewAgendamentos).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox2.SuspendLayout();
-            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox1
@@ -74,7 +78,7 @@
             groupBox1.Location = new Point(12, 12);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(8);
-            groupBox1.Size = new Size(767, 203);
+            groupBox1.Size = new Size(776, 212);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Agendamentos";
@@ -181,22 +185,48 @@
             monthCalendar1.Name = "monthCalendar1";
             monthCalendar1.TabIndex = 0;
             // 
-            // dataGridViewAgendamentos
+            // dataGridView1
             // 
-            dataGridViewAgendamentos.AllowUserToAddRows = false;
-            dataGridViewAgendamentos.AllowUserToDeleteRows = false;
-            dataGridViewAgendamentos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewAgendamentos.Location = new Point(17, 27);
-            dataGridViewAgendamentos.Name = "dataGridViewAgendamentos";
-            dataGridViewAgendamentos.ReadOnly = true;
-            dataGridViewAgendamentos.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            dataGridViewAgendamentos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridViewAgendamentos.Size = new Size(748, 115);
-            dataGridViewAgendamentos.TabIndex = 1;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { ID, Equipamento, Turma, Sala, Professor, Data });
+            dataGridView1.Location = new Point(17, 27);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(748, 115);
+            dataGridView1.TabIndex = 1;
+            // 
+            // ID
+            // 
+            ID.HeaderText = "ID";
+            ID.Name = "ID";
+            // 
+            // Equipamento
+            // 
+            Equipamento.HeaderText = "Equipamento";
+            Equipamento.Name = "Equipamento";
+            // 
+            // Turma
+            // 
+            Turma.HeaderText = "Turma";
+            Turma.Name = "Turma";
+            // 
+            // Sala
+            // 
+            Sala.HeaderText = "Sala";
+            Sala.Name = "Sala";
+            // 
+            // Professor
+            // 
+            Professor.HeaderText = "Professor";
+            Professor.Name = "Professor";
+            // 
+            // Data
+            // 
+            Data.HeaderText = "Data";
+            Data.Name = "Data";
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(dataGridViewAgendamentos);
+            groupBox2.Controls.Add(dataGridView1);
             groupBox2.Location = new Point(12, 285);
             groupBox2.Name = "groupBox2";
             groupBox2.Padding = new Padding(8);
@@ -284,41 +314,28 @@
             btn_todos.TextImageRelation = TextImageRelation.ImageBeforeText;
             btn_todos.UseVisualStyleBackColor = true;
             // 
-            // panel1
-            // 
-            panel1.Controls.Add(groupBox1);
-            panel1.Controls.Add(groupBox2);
-            panel1.Controls.Add(btn_todos);
-            panel1.Controls.Add(btn_excluir);
-            panel1.Controls.Add(btn_voltar);
-            panel1.Controls.Add(btn_limpar);
-            panel1.Controls.Add(btn_alterar);
-            panel1.Controls.Add(btn_gravar);
-            panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(800, 450);
-            panel1.TabIndex = 17;
-            // 
-            // FormAgendamentos
+            // Principal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(panel1);
-            FormBorderStyle = FormBorderStyle.FixedToolWindow;
-            Icon = (Icon)resources.GetObject("$this.Icon");
-            MaximizeBox = false;
+            Controls.Add(btn_todos);
+            Controls.Add(btn_limpar);
+            Controls.Add(btn_gravar);
+            Controls.Add(btn_alterar);
+            Controls.Add(btn_voltar);
+            Controls.Add(btn_excluir);
+            Controls.Add(groupBox2);
+            Controls.Add(groupBox1);
+            FormBorderStyle = FormBorderStyle.None;
             MinimizeBox = false;
-            Name = "FormAgendamentos";
-            Text = "Agendamentos";
-            WindowState = FormWindowState.Maximized;
-            Load += FormAgendamentos_Load;
+            Name = "Principal";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Principal";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewAgendamentos).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             groupBox2.ResumeLayout(false);
-            panel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -335,7 +352,13 @@
         private TextBox textBox3;
         private Label label4;
         private TextBox textBox2;
-        private DataGridView dataGridViewAgendamentos;
+        private DataGridView dataGridView1;
+        private DataGridViewTextBoxColumn ID;
+        private DataGridViewTextBoxColumn Equipamento;
+        private DataGridViewTextBoxColumn Turma;
+        private DataGridViewTextBoxColumn Sala;
+        private DataGridViewTextBoxColumn Professor;
+        private DataGridViewTextBoxColumn Data;
         private GroupBox groupBox2;
         private Button button2;
         private Button button3;
@@ -347,6 +370,5 @@
         private Button btn_gravar;
         private Button btn_limpar;
         private Button btn_todos;
-        private Panel panel1;
     }
 }

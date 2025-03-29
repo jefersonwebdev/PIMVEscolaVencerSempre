@@ -7,13 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SQLite;
 
 namespace PIMVEscolaVencerSempre
 {
-    public partial class FormAgendamentos : Form
+    public partial class Principal : Form
     {
-        public FormAgendamentos()
+        public Principal()
         {
             InitializeComponent();
         }
@@ -41,22 +40,6 @@ namespace PIMVEscolaVencerSempre
         private void button7_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void FormAgendamentos_Load(object sender, EventArgs e)
-        {
-            CarregarAgendamentos();
-        }
-
-        private void CarregarAgendamentos()
-        {
-            BancoDadosHelper dbHelper = new BancoDadosHelper();
-            SQLiteDataReader leitor = dbHelper.ConsultarAgendamentosComNomes();
-
-            DataTable tabelaAgendamentos = new DataTable();
-            tabelaAgendamentos.Load(leitor);
-
-            dataGridViewAgendamentos.DataSource = tabelaAgendamentos;
         }
     }
 }

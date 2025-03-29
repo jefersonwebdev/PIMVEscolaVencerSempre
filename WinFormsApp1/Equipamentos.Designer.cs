@@ -64,6 +64,8 @@
             dataGridViewEquipamentos.Location = new Point(11, 27);
             dataGridViewEquipamentos.Name = "dataGridViewEquipamentos";
             dataGridViewEquipamentos.ReadOnly = true;
+            dataGridViewEquipamentos.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            dataGridViewEquipamentos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewEquipamentos.Size = new Size(754, 197);
             dataGridViewEquipamentos.TabIndex = 0;
             // 
@@ -269,7 +271,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(panel1);
-            FormBorderStyle = FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "Equipamentos";

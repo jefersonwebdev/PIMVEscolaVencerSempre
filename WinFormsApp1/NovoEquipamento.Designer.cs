@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NovoEquipamento));
             groupBox1 = new GroupBox();
             tb_descricao = new TextBox();
             label4 = new Label();
@@ -67,7 +68,7 @@
             tb_descricao.Location = new Point(11, 78);
             tb_descricao.Name = "tb_descricao";
             tb_descricao.Size = new Size(308, 23);
-            tb_descricao.TabIndex = 15;
+            tb_descricao.TabIndex = 2;
             // 
             // label4
             // 
@@ -83,7 +84,7 @@
             tb_tipo.Location = new Point(168, 34);
             tb_tipo.Name = "tb_tipo";
             tb_tipo.Size = new Size(151, 23);
-            tb_tipo.TabIndex = 13;
+            tb_tipo.TabIndex = 1;
             // 
             // label2
             // 
@@ -110,7 +111,7 @@
             cb_status.Location = new Point(9, 122);
             cb_status.Name = "cb_status";
             cb_status.Size = new Size(154, 23);
-            cb_status.TabIndex = 9;
+            cb_status.TabIndex = 3;
             // 
             // label1
             // 
@@ -126,7 +127,7 @@
             tb_nome.Location = new Point(11, 34);
             tb_nome.Name = "tb_nome";
             tb_nome.Size = new Size(154, 23);
-            tb_nome.TabIndex = 8;
+            tb_nome.TabIndex = 0;
             // 
             // btn_gravar
             // 
@@ -136,7 +137,7 @@
             btn_gravar.Location = new Point(215, 3);
             btn_gravar.Name = "btn_gravar";
             btn_gravar.Size = new Size(114, 49);
-            btn_gravar.TabIndex = 26;
+            btn_gravar.TabIndex = 4;
             btn_gravar.Text = "Gravar";
             btn_gravar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btn_gravar.UseVisualStyleBackColor = true;
@@ -150,7 +151,7 @@
             btn_voltar.Location = new Point(3, 3);
             btn_voltar.Name = "btn_voltar";
             btn_voltar.Size = new Size(114, 49);
-            btn_voltar.TabIndex = 24;
+            btn_voltar.TabIndex = 5;
             btn_voltar.Text = "Cancelar";
             btn_voltar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btn_voltar.UseVisualStyleBackColor = true;
@@ -174,6 +175,7 @@
             Controls.Add(panel1);
             Controls.Add(groupBox1);
             FormBorderStyle = FormBorderStyle.FixedDialog;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "NovoEquipamento";

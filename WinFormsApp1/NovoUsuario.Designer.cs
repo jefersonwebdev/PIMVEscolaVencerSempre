@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NovoUsuario));
             panel1 = new Panel();
             btn_voltar = new Button();
             button2 = new Button();
@@ -62,7 +63,7 @@
             btn_voltar.Location = new Point(4, 3);
             btn_voltar.Name = "btn_voltar";
             btn_voltar.Size = new Size(114, 49);
-            btn_voltar.TabIndex = 25;
+            btn_voltar.TabIndex = 5;
             btn_voltar.Text = "Cancelar";
             btn_voltar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btn_voltar.UseVisualStyleBackColor = true;
@@ -76,7 +77,7 @@
             button2.Location = new Point(218, 3);
             button2.Name = "button2";
             button2.Size = new Size(114, 49);
-            button2.TabIndex = 17;
+            button2.TabIndex = 4;
             button2.Text = "Gravar";
             button2.TextImageRelation = TextImageRelation.ImageBeforeText;
             button2.UseVisualStyleBackColor = true;
@@ -114,21 +115,22 @@
             textBoxNome.Location = new Point(6, 37);
             textBoxNome.Name = "textBoxNome";
             textBoxNome.Size = new Size(154, 23);
-            textBoxNome.TabIndex = 4;
+            textBoxNome.TabIndex = 0;
             // 
             // textBoxLogin
             // 
             textBoxLogin.Location = new Point(6, 81);
             textBoxLogin.Name = "textBoxLogin";
             textBoxLogin.Size = new Size(154, 23);
-            textBoxLogin.TabIndex = 5;
+            textBoxLogin.TabIndex = 2;
             // 
             // textBoxSenha
             // 
             textBoxSenha.Location = new Point(164, 81);
             textBoxSenha.Name = "textBoxSenha";
+            textBoxSenha.PasswordChar = '*';
             textBoxSenha.Size = new Size(154, 23);
-            textBoxSenha.TabIndex = 6;
+            textBoxSenha.TabIndex = 3;
             // 
             // label4
             // 
@@ -146,7 +148,7 @@
             comboBoxTipo.Location = new Point(164, 37);
             comboBoxTipo.Name = "comboBoxTipo";
             comboBoxTipo.Size = new Size(154, 23);
-            comboBoxTipo.TabIndex = 8;
+            comboBoxTipo.TabIndex = 1;
             // 
             // groupBox1
             // 
@@ -173,6 +175,7 @@
             Controls.Add(groupBox1);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.FixedDialog;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "NovoUsuario";

@@ -11,7 +11,7 @@ using System.IO;
 public class BancoDadosHelper
 {
     private string caminhoPastaBancoDados = @"d:\Downloads\UNIP\projeto PIM V\repos\WinFormsApp1\WinFormsApp1\BancoDeDados";
-    //private string caminhoPastaBancoDados = @"C:\Users\Cop\Documents\Visual Studio 2022\projeto PIM V\repos\WinFormsApp1\WinFormsApp1\BancoDeDados";
+    // private string caminhoPastaBancoDados = @"C:\Users\Cop\Documents\Visual Studio 2022\projeto PIM V\repos\WinFormsApp1\WinFormsApp1\BancoDeDados";
     private string caminhoBancoDados;
     private string stringConexao;
 
@@ -101,6 +101,23 @@ public class BancoDadosHelper
         return ExecutarConsulta(comandoSql);
     }
 
+    public SQLiteDataReader ConsultarEquipamentosDisponiveis()
+    {
+        string comandoSql = "SELECT * FROM Equipamentos WHERE status = 'Disponível'";
+        return ExecutarConsulta(comandoSql);
+    }
+
+    public int AtualizarStatusEquipamento(int equipamentoId, string status)
+    {
+        string comandoSql = "UPDATE Equipamentos SET status = @status WHERE id = @id";
+        SQLiteParameter[] parametros = {
+            new SQLiteParameter("@status", status),
+            new SQLiteParameter("@id", equipamentoId)
+        };
+        return ExecutarComando(comandoSql, parametros);
+    }
+
+
     // Métodos para a tabela Usuarios
     public int InserirUsuario(string nome, string login, string senha, string tipo)
     {
@@ -181,6 +198,22 @@ public class BancoDadosHelper
         return ExecutarConsulta(comandoSql);
     }
 
+    public SQLiteDataReader ConsultarAgendamentosComNomes()
+    {
+        string comandoSql = @"
+        SELECT 
+            Agendamentos.id,
+            Equipamentos.nome AS equipamento_nome,
+            Usuarios.nome AS usuario_nome,
+            Agendamentos.data,
+            Agendamentos.hora,
+            Agendamentos.sala
+        FROM Agendamentos
+        INNER JOIN Equipamentos ON Agendamentos.equipamento_id = Equipamentos.id
+        INNER JOIN Usuarios ON Agendamentos.usuario_id = Usuarios.id";
+        return ExecutarConsulta(comandoSql);
+    }
+
     // Métodos para a tabela Historico
     public int InserirHistorico(int equipamentoId, int usuarioId, string dataInicio, string dataFim, string observacoes)
     {
@@ -221,4 +254,7 @@ public class BancoDadosHelper
         string comandoSql = "SELECT * FROM Historico";
         return ExecutarConsulta(comandoSql);
     }
+
+    // consultar equipamentos disponiveis    
+
 }

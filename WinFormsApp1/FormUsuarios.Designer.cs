@@ -91,6 +91,7 @@
             // 
             textBox2.Location = new Point(171, 86);
             textBox2.Name = "textBox2";
+            textBox2.PasswordChar = '*';
             textBox2.Size = new Size(154, 23);
             textBox2.TabIndex = 13;
             // 
@@ -115,7 +116,7 @@
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Datashow", "Projetor", "Notebook", "Caixa de Som" });
+            comboBox1.Items.AddRange(new object[] { "professor", "admin" });
             comboBox1.Location = new Point(171, 42);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(154, 23);
@@ -157,6 +158,8 @@
             dataGridViewUsuarios.Location = new Point(11, 27);
             dataGridViewUsuarios.Name = "dataGridViewUsuarios";
             dataGridViewUsuarios.ReadOnly = true;
+            dataGridViewUsuarios.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            dataGridViewUsuarios.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewUsuarios.Size = new Size(749, 198);
             dataGridViewUsuarios.TabIndex = 0;
             // 
@@ -261,7 +264,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(panel1);
-            FormBorderStyle = FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormUsuarios";
             Text = "FormUsuarios";
             WindowState = FormWindowState.Maximized;
